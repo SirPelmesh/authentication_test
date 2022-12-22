@@ -1,5 +1,3 @@
-import selenium
-
 from actions import Factory
 
 # valid input
