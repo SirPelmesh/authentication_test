@@ -1,8 +1,5 @@
-from selenium.webdriver.support import wait, expected_conditions
-
 from page import BasePage
 from selenium.webdriver.common.by import By
-from selenium import webdriver
 
 # definition of locators to be used in the test
 class LoginLocators:
