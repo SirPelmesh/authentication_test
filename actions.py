@@ -1,5 +1,3 @@
-from selenium.webdriver.support.wait import WebDriverWait
-
 from PageObject import AuthForm
 
 class Factory(object):
