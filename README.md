@@ -5,8 +5,8 @@ Testing Authentication with Pytest and Silenium Using BaseObject and Factors Pat
 ## Installing
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.<br>
-For this project, you will need Python 3.7 and newer, the Selenium and Pytest frameworks.<br>
-You can install Python from its official website, frameworks can be installed using these commands:
+For this project, you will need Python, the Selenium and Pytest libraries.<br>
+You can install the latest Python version from the official website, libraries can be installed using these commands:
 
 ```
 pip install pytest
