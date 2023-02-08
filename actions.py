@@ -1,12 +1,17 @@
-from PageObject import AuthForm
-
-class Factory(object):
+'''from LoginPage import LoginPage
+from BaseElement import BaseElement
+class test_actions(LoginPage):
 
     def authpage(self,browser,user=None,passw=None):  # client function
-                self.main_page = AuthForm(browser)  # class initialization
+                self.main_page = LoginPage(browser)  # class initialization
                 self.main_page.go_to_site()  # go to authentication page
                 self.old_url=self.main_page.return_current_url(browser) # get the current url and save it as old_url
                 return self.choose_path(browser, user, passw)
+
+    def log_in(self):
+        pass
+
+
 
     def check_url(self,browser):  # url comparison function
         self.main_page.click_on_the_submit_button()  # click the submit button
@@ -40,3 +45,4 @@ class Factory(object):
 
 
 
+'''
