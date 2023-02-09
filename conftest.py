@@ -7,9 +7,7 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser(request):
     browser_name = request.config.getoption("browser_name")
-    print(browser_name)
-    browser = Driver.chooseDriver(request.config.getoption("browser_name"))
-    print(hex(id(browser)))
+    browser = Driver.chooseDriver(browser_name)
     yield browser
     print("\nquit browser..")
     browser.quit()

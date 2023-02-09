@@ -1,6 +1,8 @@
 
 import pytest
 from LoginPage import LoginPage
+from WelcomePage import WelcomePage
+from HomePage import HomePage
 
 @pytest.mark.parametrize('login, password',
                         [
@@ -8,9 +10,8 @@ from LoginPage import LoginPage
                         ]
                         )
 def test_altoro_matual_valid_auth(login, password, browser):
-    page = LoginPage(browser)
-    page.log_in_with_filled_fields(login,password)
-    assert page.this_is_LoginPage()==False
+    LoginPage(browser).log_in_with_filled_fields(login,password)
+    assert WelcomePage.this_is_WelcomPage()
 
 @pytest.mark.parametrize('login, password',
                         [

@@ -42,7 +42,7 @@ class LoginPage(BaseElement):
         self.submit_alert()
 
     def this_is_LoginPage(self):
-        if self.element_is_present(self.USERNAME_LOCATOR) and self.return_current_url()==self.LOGIN_URL: return True
+        if self.element_is_present(self.USERNAME_LOCATOR) or self.return_current_url()==self.LOGIN_URL: return True
 
 
 
