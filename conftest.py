@@ -1,7 +1,7 @@
 import pytest
 from BrowserFactory import Driver
 def pytest_addoption(parser):
-    parser.addoption('--browser_name', action='store', default="edge",
+    parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
 
 @pytest.fixture(scope="function")

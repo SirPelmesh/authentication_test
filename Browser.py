@@ -1,12 +1,12 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class BasePage:
+#this is page идет в BasePage is opened is closed
+class Browser:
 
     def __init__(self, driver):
         self.driver = driver
         self.base_url = "http://testfire.net/login.jsp"
-
 
     # function to go to the specified url
     def go_to_site(self):
@@ -18,3 +18,4 @@ class BasePage:
 
 ''' def submit_alert(self,driver):
         driver.switch_to.alert.accept()'''
+#browser

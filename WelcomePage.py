@@ -1,8 +1,9 @@
 from BaseElement import BaseElement
 from selenium.webdriver.common.by import By
 
+#добавить в Гитхабе KarasyovVS в репозитории
 class WelcomePage(BaseElement):
-    UNIQUE_LOCATOR = (By.ID, "ListAccounts")  # locator for the password field
+    UNIQUE_LOCATOR = (By.ID, "ListAccounts")  # locator for the password field KarasyovVS
     WELCOME_URL = "http://testfire.net/bank/main.jsp"
 
     def this_is_WelcomePage(self):

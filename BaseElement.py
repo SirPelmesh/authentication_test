@@ -1,20 +1,20 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from BasePage import BasePage
+from Browser import Browser
 
-class BaseElement(BasePage):
+class BaseElement(Browser):
 
     def enter_data(self, element, data):
         element.click()
         element.send_keys(data)
 
     def find_element(self, locator,time=1):
-        return WebDriverWait(self.driver,time).until(EC.presence_of_element_located(locator),
-                                                      message=f"Can't find element by locator {locator}")
+        return WebDriverWait(self.driver,time).until(EC.presence_of_element_located(locator))
+
 
     def find_elements(self, locator, time=1):
-        return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator),
-                                                      message=f"Can't find elements by locator {locator}")
+        return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator))
+
 
     def element_is_present(self,locator):
         return len(self.find_elements(locator)) > 0
