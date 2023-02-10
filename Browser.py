@@ -20,8 +20,8 @@ class Browser(metaclass=Singleton):
 
     # function to go to the specified url
     @classmethod
-    def go_to_site(self):
-        return self.driver.get(self.base_url) 
+    def go_to_site(cls,base_url):
+        return cls.driver.get(base_url)
     
     # function to return the current url
 
