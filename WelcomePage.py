@@ -1,6 +1,5 @@
-from BaseElement import BaseElement
 from selenium.webdriver.common.by import By
-from BasePage import BasePage
+from Framework.BasePage import BasePage
 
 #добавить в Гитхабе KarasyovVS в репозитории
 class WelcomePage(BasePage):

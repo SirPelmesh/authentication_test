@@ -4,11 +4,8 @@ from LoginPage import LoginPage
 from WelcomePage import WelcomePage
 from HomePage import HomePage
 from Browser import Browser
-from Driver import Driver
-from Browser import Browser
-from BaseElement import BaseElement
-from Button import Button
-from TextBox import TextBox
+from Framework.Button import Button
+
 
 @pytest.mark.parametrize('login, password',
                         [

@@ -1,14 +1,10 @@
-from Browser import Browser
 from selenium.webdriver.common.by import By
-from BaseElement import BaseElement
-from BasePage import BasePage
-from TextBox import TextBox
-from Button import Button
+from Framework.BasePage import BasePage
+from Framework.TextBox import TextBox
+from Framework.Button import Button
 
 # functions for interacting with locators
 class LoginPage(BasePage):
-    # До этого BaseElement унаследовал функционал BasePage, поэтому теперь пишем здесь только BaseElement.
-    # Правильно ли это, если интуитивно это не понятно?
 
     USERNAME_LOCATOR = (By.NAME, "uid")  # locator for the username field
     PASSWORD_LOCATOR = (By.NAME, "passw")  # locator for the password field
@@ -36,9 +32,9 @@ class LoginPage(BasePage):
         pass
 
     def log_in(self, login, password):
-        Button(self.USERNAME_LOCATOR).enter_data(login)
-        Button(self.PASSWORD_LOCATOR).enter_data(password)
-        TextBox(self.BUTTON_LOCATOR).click_the_button()
+        TextBox(self.USERNAME_LOCATOR).enter_data(login)
+        TextBox(self.PASSWORD_LOCATOR).enter_data(password)
+        Button(self.BUTTON_LOCATOR).click_the_button()
 
 
 

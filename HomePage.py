@@ -1,7 +1,5 @@
-from Browser import Browser
 from selenium.webdriver.common.by import By
-from BaseElement import BaseElement
-from BasePage import BasePage
+from Framework.BasePage import BasePage
 
 
 class HomePage(BasePage):

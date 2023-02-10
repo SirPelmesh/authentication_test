@@ -1,9 +1,7 @@
-from abc import ABC, abstractmethod
-from BaseElement import BaseElement
-
+from abc import ABC
+from Framework.BaseElement import BaseElement
 
 class BasePage(ABC):
-    #локатор
     def __init__(self,locator):
         self.Locator=locator
 
