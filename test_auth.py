@@ -3,6 +3,9 @@ import pytest
 from LoginPage import LoginPage
 from WelcomePage import WelcomePage
 from HomePage import HomePage
+from Browser import Browser
+from Driver import Driver
+from Browser import Browser
 
 @pytest.mark.parametrize('login, password',
                         [

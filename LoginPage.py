@@ -1,48 +1,44 @@
 from Browser import Browser
 from selenium.webdriver.common.by import By
 from BaseElement import BaseElement
+from BasePage import BasePage
 
 # functions for interacting with locators
-class LoginPage(BaseElement):
+class LoginPage(BasePage):
     # До этого BaseElement унаследовал функционал BasePage, поэтому теперь пишем здесь только BaseElement.
     # Правильно ли это, если интуитивно это не понятно?
 
     USERNAME_LOCATOR = (By.NAME, "uid")  # locator for the username field
     PASSWORD_LOCATOR = (By.NAME, "passw")  # locator for the password field
     BUTTON_LOCATOR = (By.NAME, "btnSubmit")  # locator for submit button
-    LOGIN_URL = "http://testfire.net/login.jsp"
+    URL = "http://testfire.net/login.jsp"
+
+    LoginPage=BasePage(USERNAME_LOCATOR)
 
     # function to input username
     def enter_username(self, username):
-        username_field = self.find_element(self.USERNAME_LOCATOR)  # search for the username field
-        self.enter_data(username_field,username)
+        username_field = BaseElement(self.USERNAME_LOCATOR).find_element()  # search for the username field
+        username_field.enter_data(username)
 
     # function to input password
     def enter_password(self, password):
-        passw_field = self.find_element(self.PASSWORD_LOCATOR)  # search for the password field
-        self.enter_data(passw_field,password)
+        passw_field = BaseElement(self.PASSWORD_LOCATOR).find_element()  # search for the password field
+        passw_field.enter_data(password)
 
     # button click to send data
     def click_on_the_submit_button(self):
-        self.click_the_button(self.BUTTON_LOCATOR)
+        BaseElement(self.BUTTON_LOCATOR).click_the_button()
 
-    def log_in_with_filled_fields(self, username, password):
-        # это точно должно быть здесь?
-        # я дублирую функции выше, есть ли в этом смысл?
-        self.go_to_site()
+    def log_in(self, username, password):
         self.enter_username(username)
         self.enter_password(password)
         self.click_on_the_submit_button()
 
-    def log_in_without_filled_fields(self, username, password):
-        self.go_to_site()
-        self.enter_username(username)
-        self.enter_password(password)
-        self.click_on_the_submit_button()
-        self.submit_alert()
 
-    def this_is_LoginPage(self):
-        if self.element_is_present(self.USERNAME_LOCATOR) or self.return_current_url()==self.LOGIN_URL: return True
+    def return_locator(self):
+        pass
+
+
 
 
 

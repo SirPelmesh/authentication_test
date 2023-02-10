@@ -4,6 +4,8 @@ class Logg():
     def __init__(self, name):
         self.logger = logging.getLogger(name)
         logging.basicConfig(level=logging.INFO, filename=f'{name}.log', filemode="w")
+        logging.StreamHandler(stream=None)
+        #logging.FileHandler(filename=f'{name}.log', filemode="w")
 
     #@staticmethod
     def makeLog(self,text):

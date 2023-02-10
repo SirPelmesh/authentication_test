@@ -1,5 +1,6 @@
 import pytest
-from BrowserFactory import Driver
+from Driver import Driver
+from Browser import Browser
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser: chrome or firefox")
@@ -7,7 +8,9 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser(request):
     browser_name = request.config.getoption("browser_name")
-    browser = Driver.chooseDriver(browser_name)
-    yield browser
-    print("\nquit browser..")
-    browser.quit()
+    # browser=Browser(browser_name).get_driver()
+    base_url = "http://testfire.net/"
+    Browser().go_to_site(base_url)
+    yield
+    # browser.quit()
+    Browser.quit()

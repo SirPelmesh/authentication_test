@@ -1,10 +1,12 @@
 from BaseElement import BaseElement
 from selenium.webdriver.common.by import By
+from BasePage import BasePage
 
 #добавить в Гитхабе KarasyovVS в репозитории
-class WelcomePage(BaseElement):
-    UNIQUE_LOCATOR = (By.ID, "ListAccounts")  # locator for the password field KarasyovVS
-    WELCOME_URL = "http://testfire.net/bank/main.jsp"
+class WelcomePage(BasePage):
+    UNIQUE_LOCATOR = (By.ID, "listAccounts")  # locator for the password field KarasyovVS
+    URL = "http://testfire.net/bank/main.jsp"
+    WelcomePage = BasePage(UNIQUE_LOCATOR)
 
-    def this_is_WelcomePage(self):
-        if self.element_is_present(self.UNIQUE_LOCATOR) or self.return_current_url()==self.WELCOME_URL: return True
+    def return_locator(self):
+        pass
