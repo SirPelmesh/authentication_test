@@ -1,5 +1,7 @@
 class BrowserConfig(object):
     BROWSER_NAME = "chrome"
 
-    def change_browser_name(self,browser_name):
-        self.BROWSER_NAME=browser_name
+    # функция ниже задумывалась для изменения BROWSER_NAME
+    # в случае получения флага с помощью parser, но что-то пошло не так:с
+    '''def change_browser_name(self,browser_name):
+        self.BROWSER_NAME=browser_name'''

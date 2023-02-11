@@ -1,12 +1,10 @@
 import logging
 
 class Logg():
-    def __init__(self, name):
-        self.logger = logging.getLogger(name)
-        logging.basicConfig(level=logging.WARNING, filename=f'{name}.log', filemode="w")
-        logging.StreamHandler(stream=None)
-        #logging.FileHandler(filename=f'{name}.log', filemode="w")
+    def __init__(self):
+        self.logger = logging.getLogger()
+        #logging.basicConfig(level=logging.WARNING, filename=f'log_for_test.log',
+         #                   filemode="a", format="%(name)s %(asctime)s %(levelname)s %(message)s")
 
-    #@staticmethod
     def makeLog(self,text):
-        self.logger.info(msg=text)
+        self.logger.warning(msg=text)

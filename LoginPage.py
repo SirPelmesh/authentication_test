@@ -15,18 +15,18 @@ class LoginPage(BasePage):
 
     # function to input username
     def enter_username(self, username):
-        username_field = TextBox(self.USERNAME_LOCATOR).find_element()  # search for the username field
+        username_field = TextBox(self.USERNAME_LOCATOR)  # search for the username field
         username_field.enter_data(username)
 
     # function to input password
     def enter_password(self, password):
-        passw_field = TextBox(self.PASSWORD_LOCATOR).find_element()  # search for the password field
+        passw_field = TextBox(self.PASSWORD_LOCATOR)  # search for the password field
         passw_field.enter_data(password)
 
     # button click to send data
     def click_on_the_submit_button(self):
-        button = Button(self.BUTTON_LOCATOR).find_element()
-        button.click_the_button()
+        button = Button(self.BUTTON_LOCATOR)
+        button.click_the_element()
 
     def return_locator(self):
         pass
@@ -34,7 +34,7 @@ class LoginPage(BasePage):
     def log_in(self, login, password):
         TextBox(self.USERNAME_LOCATOR).enter_data(login)
         TextBox(self.PASSWORD_LOCATOR).enter_data(password)
-        Button(self.BUTTON_LOCATOR).click_the_button()
+        Button(self.BUTTON_LOCATOR).click_the_element()
 
 
 

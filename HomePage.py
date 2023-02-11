@@ -3,7 +3,7 @@ from Framework.BasePage import BasePage
 
 
 class HomePage(BasePage):
-    UNIQUE_LOCATOR='// a[contains( @ href, "_savi")]'
+    UNIQUE_LOCATOR=r'//a[contains(@href,"personal_savi")]'
     URL='http://testfire.net/index.jsp'
     LOGIN_BUTTON_LOCATOR = (By.ID, "LoginLink")
 
