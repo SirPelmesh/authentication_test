@@ -9,10 +9,7 @@ class BaseElement(ABC):
     def __init__(self,locator):
         self.locator=locator
 
-    def enter_data(self,data):
-        element = self.find_element()
-        element.click()
-        element.send_keys(data)
+
 
     def find_element(self,time=1):
         print(type(self.driver))
@@ -31,9 +28,7 @@ class BaseElement(ABC):
     def submit_alert(self):
         self.driver.switch_to.alert.accept()
 
-    def click_the_button(self):
-        element=self.find_element()
-        element.click()
+
 
 ''' @abstractmethod
     def get_element(self):

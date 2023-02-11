@@ -2,8 +2,8 @@ from abc import ABC
 from Framework.BaseElement import BaseElement
 
 class BasePage(ABC):
-    def __init__(self,locator):
-        self.Locator=locator
+    def __init__(self, locator):
+        self.Locator = locator
 
     def is_opened(self):
         if BaseElement(self.Locator).element_is_present():

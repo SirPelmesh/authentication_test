@@ -4,7 +4,7 @@ from browser_config import BrowserConfig
 
 class Browser(metaclass=Singleton):
 
-    driver = Driver.chooseDriver(BrowserConfig.BROWSER_NAME)
+    driver = Driver.chooseDriver(BrowserConfig().BROWSER_NAME)
 
     @classmethod
     def get_driver(self):

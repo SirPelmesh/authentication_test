@@ -12,14 +12,12 @@ from Framework.Button import Button
                             ('admin', 'admin'),
                         ]
                         )
-def test_altoro_matual_valid_auth(login, password, browser):
+def test_altoro_matual_valid_auth(login, password):
     Browser.go_to_site(HomePage.URL)
     Button(HomePage.LOGIN_BUTTON_LOCATOR).click_the_button()
-    if LoginPage(LoginPage.USERNAME_LOCATOR).is_opened():
-        print('Перешли на страницу аутентификации')
+
     LoginPage(LoginPage.USERNAME_LOCATOR).log_in(login, password)
-    if WelcomePage(WelcomePage.UNIQUE_LOCATOR).is_opened():
-        print('Перешли на страницу приветствия')
+
     assert WelcomePage(WelcomePage.UNIQUE_LOCATOR).is_opened()
 
 '''@pytest.mark.parametrize('login, password',
