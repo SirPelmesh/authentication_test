@@ -4,17 +4,12 @@ WARNING  root:Logger.py:8 Authorization page opened
 WARNING  root:Logger.py:8 Only login entered
 WARNING  root:Logger.py:8 Button pressed, data sent
 WARNING  root:Logger.py:8 Notification of blank password accepted
-WARNING  root:Logger.py:8 __Test sending feedback only with a name__
-WARNING  root:Logger.py:8 Home page opened
-WARNING  root:Logger.py:8 Feedback page opened
-WARNING  root:Logger.py:8 Only name entered
-WARNING  root:Logger.py:8 Button pressed, data sent
 WARNING  root:Logger.py:8 __Test with right username and password__
 WARNING  root:Logger.py:8 Home page opened
 WARNING  root:Logger.py:8 Authorization page opened
 WARNING  root:Logger.py:8 Data entered
 WARNING  root:Logger.py:8 Welcome page opened
 WARNING  root:Logger.py:8 __Test with wrong username and password__
-WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002493D0285E0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/52b6d008b4869b29ed7d8d694bbed1f0/url
-WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002493D02A6E0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/52b6d008b4869b29ed7d8d694bbed1f0/url
-WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002493D028D30>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/52b6d008b4869b29ed7d8d694bbed1f0/url
+WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029BF860A020>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/9374b0b93cf1905691aa0a6502f319d4/url
+WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029BF860A4D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/9374b0b93cf1905691aa0a6502f319d4/url
+WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029BF860A7A0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/9374b0b93cf1905691aa0a6502f319d4/url

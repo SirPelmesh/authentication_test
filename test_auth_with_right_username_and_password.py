@@ -13,7 +13,7 @@ logger=Logg()
                             ('admin', 'admin'),
                         ]
                         )
-def test_with_right_username_and_password(login, password, browser):
+def test_auth_with_right_username_and_password(login, password, browser):
     logger.makeLog('__Test with right username and password__')
     Browser.go_to_site(HomePage.URL)
     logger.makeLog(text='Home page opened')

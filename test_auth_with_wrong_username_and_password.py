@@ -14,7 +14,7 @@ logger=Logg()
                         ]
                         )
 
-def test_with_wrong_username_and_password(login,password):
+def test_auth_with_wrong_username_and_password(login,password):
     logger.makeLog('__Test with wrong username and password__')
     Browser.go_to_site(HomePage.URL)
     logger.makeLog(text='Home page opened')

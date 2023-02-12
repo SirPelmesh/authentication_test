@@ -24,6 +24,6 @@ def test_auth_with_entered_login_and_empty_password(login):
     logger.makeLog(text='Only login entered')
     Button(LoginPage.BUTTON_LOCATOR).click_the_element()
     logger.makeLog(text='Button pressed, data sent')
-    Browser.get_driver().switch_to.alert.accept()
-    logger.makeLog(text='Notification of blank password accepted')
+    if Browser.catch_alert():
+        logger.makeLog(text='Notification of blank password accepted')
     assert LoginPage(LoginPage.USERNAME_LOCATOR).is_opened(), logger.makeLog(text='Test failed')
