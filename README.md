@@ -25,9 +25,6 @@ When you will receive the results of the test run, they will look like this:
 Also, all information about the tests will be saved in a file log_for_test.log:
 ![image](https://user-images.githubusercontent.com/93818945/218304719-0b5d24b6-ae6e-468d-82ef-d65e94b51e0e.png)
 
-
-![image](https://user-images.githubusercontent.com/93818945/208955120-95d902e8-2ecb-4f35-b25c-f61490735887.png)
-
 ## Description
 In the sign-in section of the Altoro Mutual website we can find an authorization form.<br>
 Following tests were created:
