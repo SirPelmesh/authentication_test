@@ -1,6 +1,6 @@
-# Testing Authentication for Altoro Mutual
+# Testing Authentication and Feedback forms for Altoro Mutual
 
-Testing Authentication with Pytest and Silenium Using BaseObject and Factors Patterns.
+Testing Authentication and Feedback with Pytest and Silenium Using BaseObject and Factors Patterns.
 
 ## Installing
 
@@ -12,23 +12,22 @@ You can install the latest Python version from the official website, libraries c
 pip install pytest
 pip install Selenium
 ```
+There is also a requirements.txt.
+
 ### Running the tests
 
 To start tests enter the following command in the terminal:
 ```
-pytest main.py
+pytest
 ```
 When you will receive the results of the test run, they will look like this:
-![image](https://user-images.githubusercontent.com/93818945/208954742-1687b47d-8014-4529-904b-011495c3251c.png)
-If you want to see more information, you can add a flag "-v" to a command in the terminal:
-```
-pytest -v main.py
-```
-![image](https://user-images.githubusercontent.com/93818945/208955120-95d902e8-2ecb-4f35-b25c-f61490735887.png)
+![image](https://user-images.githubusercontent.com/93818945/218304697-63c74f55-7490-43a0-a1d9-e1959fb4755d.png)
+Also, all information about the tests will be saved in a file log_for_test.log:
+![image](https://user-images.githubusercontent.com/93818945/218304719-0b5d24b6-ae6e-468d-82ef-d65e94b51e0e.png)
 
 ## Description
-In the sign-in section of the Altoro Mutual website we can find an authorization form. The task is to conduct several tests for this form.<br>
-Therefore, three tests were created:
+In the sign-in section of the Altoro Mutual website we can find an authorization form.<br>
+Following tests were created:
 <ol>
 <li>a test with input of valid data,</li>
 <li>a test with input of invalid data,</li>
@@ -38,19 +37,19 @@ The last one should trigger JavaScript alert.
 
 ![image](https://user-images.githubusercontent.com/93818945/208936548-df8285b1-455f-4b53-b6fe-492c35c2830a.png)
 
-The test uses a pattern PageObject, so:
-<ul>
-<li>The class Locators from PageObject.py contains username,password fields and submit button locators. </li>
-<li>The class AuthForm from PageObject.py contains functions for finding locators from class Locators and interacting with them.</li>
-<li>The class BasePage from page.py contains functions for interaction with the browser.</li>
-<li>The conftest.py contains a fixture to launch and quit the browser.</li>
-<li>The class Factory from actions.py represents the user actions and and determines the behavior of the program.</li>
-<li>The main.py contains the tests that are carried out.</li>
-</ul>
-Factory class result depends on the number of introduced variables: 
+In the feedback section of the Altoro Mutual website we can find a feedback form.<br>
+Following tests were created:
 <ol>
-<li>If both variables are entered, the function checks whether the url has changed from the login page to the welcome page or not.</li>
-<li>If a single variable is entered, the function returns a variable that contains data about the occurrence of a warning.</li>
+<li>a test with input of only one field (with a name, in our case).</li>
 </ol>
 
-[**Yuliya Mirko**](https://github.com/SirPelmesh)
+The test uses a pattern PageObject, so:
+<ul>
+<li>The class BaseElement is an abstract class which contains methods to interact with elements on the page (searching for elements, clicking on the elements for example). </li>
+<li>The class BasePage is an abstract class which contains methods to interact with the page (checking whether page is open, for example),</li>
+<li>The class Browser contains methods for interaction with the browser (go to site with specifed url, or refresh the page),</li>
+<li>The class Driver is a BrowserFactory which provide different options for different browsers (Firefox or Chrome),</li>
+<li>The conftest.py contains a fixture to launch and quit the browser,</li>
+<li>The Singleton contains Singletone for the Browser.</li>
+</ul>
+
