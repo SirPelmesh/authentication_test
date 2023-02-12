@@ -53,4 +53,3 @@ The test uses a pattern PageObject, so:
 <li>The Singleton contains Singletone for the Browser.</li>
 </ul>
 
-[**Yuliya Mirko**](https://github.com/SirPelmesh)
