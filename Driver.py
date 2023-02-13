@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 from Singleton import Singleton
+from Logger import Logg
+logger=Logg()
 
 class Driver(metaclass = Singleton):
 
