@@ -15,3 +15,5 @@ class HomePage(BasePage):
     LOGIN_BUTTON_LOCATOR = (By.ID, "LoginLink")
     FEEDBACK_BUTTON_LOCATOR = (By.XPATH, "//a[contains(@href,'eedb')]")
 
+    #для каждой кнопки отдельная функция
+

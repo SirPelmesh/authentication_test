@@ -40,3 +40,4 @@ class BasePage(ABC):
         if BaseElement(self.Locator).element_is_not_present():
             return True
 
+

@@ -10,7 +10,8 @@ class LoginPage(BasePage):
     BUTTON_LOCATOR = (By.NAME, "btnSubmit")  # locator for submit button
     URL = "http://testfire.net/login.jsp"
 
-    LoginPage=BasePage(USERNAME_LOCATOR)
+    def __init__(self):
+        super().__init__(locator=self.USERNAME_LOCATOR)
 
     # function to input username
     def enter_username(self, username):
