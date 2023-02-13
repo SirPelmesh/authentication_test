@@ -14,6 +14,7 @@ class Browser(metaclass=Singleton):
 
     @classmethod
     def quit(self):
+        self.clear()
         self.get_driver().quit()
 
     # function to go to the specified url

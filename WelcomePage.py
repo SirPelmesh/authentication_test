@@ -9,3 +9,6 @@ class WelcomePage(BasePage):
 
     # page address
     URL = "http://testfire.net/bank/main.jsp"
+
+    def __init__(self):
+        super().__init__(locator=self.UNIQUE_LOCATOR)

@@ -13,15 +13,15 @@ logger=Logg()
                             ('admin', 'admin'),
                         ]
                         )
-def test_auth_with_right_username_and_password(login, password, browser):
+def test_auth_with_right_username_and_password(browser,login, password):
     logger.makeLog('__Test with right username and password__')
     Browser.go_to_site(HomePage.URL)
     logger.makeLog(text='Home page opened')
-    Button(HomePage.LOGIN_BUTTON_LOCATOR).click_the_element()
-    if LoginPage(LoginPage.USERNAME_LOCATOR).is_opened():
+    HomePage().click_on_the_log_in_link_button()
+    if LoginPage().is_opened():
         logger.makeLog(text='Authorization page opened')
-    LoginPage(LoginPage.USERNAME_LOCATOR).log_in(login, password)
+    LoginPage().log_in(login, password)
     logger.makeLog(text='Data entered')
-    if WelcomePage(WelcomePage.UNIQUE_LOCATOR).is_opened():
+    if WelcomePage().is_opened():
         logger.makeLog(text='Welcome page opened')
-    assert WelcomePage(WelcomePage.UNIQUE_LOCATOR).is_opened(), logger.makeLog(text='Test failed')
+    assert WelcomePage().is_opened()

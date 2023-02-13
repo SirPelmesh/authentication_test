@@ -15,5 +15,15 @@ class HomePage(BasePage):
     LOGIN_BUTTON_LOCATOR = (By.ID, "LoginLink")
     FEEDBACK_BUTTON_LOCATOR = (By.XPATH, "//a[contains(@href,'eedb')]")
 
-    #для каждой кнопки отдельная функция
+    def __init__(self):
+        super().__init__(locator=self.UNIQUE_LOCATOR)
+
+    def click_on_the_log_in_link_button(self):
+        button = Button(self.LOGIN_BUTTON_LOCATOR)
+        button.click_the_element()
+
+    def click_on_the_feedback_link_button(self):
+        button = Button(self.FEEDBACK_BUTTON_LOCATOR)
+        button.click_the_element()
+
 

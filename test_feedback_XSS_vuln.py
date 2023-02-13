@@ -9,15 +9,15 @@ from Logger import Logg
 
 logger=Logg()
 
-def test_feedback_XSS_vuln():
+def test_feedback_XSS_vuln(browser):
     logger.makeLog('__Test feedback XSS vuln__')
     Browser.go_to_site(HomePage.URL)
     logger.makeLog(text='Home page opened')
-    Button(HomePage.FEEDBACK_BUTTON_LOCATOR).click_the_element()
-    if FeedbackPage(FeedbackPage.YOUR_NAME_LOCATOR).is_opened():
+    HomePage().click_on_the_feedback_link_button()
+    if FeedbackPage().is_opened():
         logger.makeLog(text='Feedback page opened')
-    FeedbackPage(FeedbackPage.YOUR_NAME_LOCATOR).enter_name("<script>alert('attack')</script>")
+    FeedbackPage().enter_name("<script>alert('attack')</script>")
     logger.makeLog(text='JavaScript command entered in the name field')
-    Button(FeedbackPage.BUTTON_LOCATOR).click_the_element()
+    FeedbackPage().click_on_the_submit_button()
     logger.makeLog(text='Button pressed, data sent')
-    assert Browser.catch_alert(), logger.makeLog(text='Notification was not accepted')
+    assert Browser.catch_alert()

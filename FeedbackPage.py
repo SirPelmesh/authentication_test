@@ -12,7 +12,8 @@ class FeedbackPage(BasePage):
     COMMENTS_LOCATOR = (By.NAME, "comments")  # creates locator for Question/Comment field
     BUTTON_LOCATOR = (By.NAME, "submit")
 
-    FeedbackPage = BasePage(YOUR_NAME_LOCATOR)
+    def __init__(self):
+        super().__init__(locator=self.YOUR_NAME_LOCATOR)
 
     def enter_name(self, name):
         TextBox(self.YOUR_NAME_LOCATOR).enter_data(name)
