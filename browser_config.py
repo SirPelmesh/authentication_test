@@ -3,5 +3,7 @@ class BrowserConfig(object):
 
     # функция ниже задумывалась для изменения BROWSER_NAME
     # в случае получения флага с помощью parser, но что-то пошло не так:с
-    '''def change_browser_name(self,browser_name):
-        self.BROWSER_NAME=browser_name'''
+    def change_browser_name(self,browser_name=None):
+        if browser_name:
+            self.BROWSER_NAME=browser_name
+

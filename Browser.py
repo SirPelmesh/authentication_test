@@ -1,10 +1,19 @@
 from Singleton import Singleton
 from Driver import Driver
 from browser_config import BrowserConfig
+from Logger import Logg
+logger=Logg()
 
 class Browser(metaclass=Singleton):
 
-    driver = Driver.chooseDriver(BrowserConfig.BROWSER_NAME)
+    driver = None
+    # def __init__(self):
+    #     self.driver = "sdfsdf"
+
+    #driver = Driver.chooseDriver(BrowserConfig.BROWSER_NAME)
+    @classmethod
+    def driver_init(cls,browser_name=BrowserConfig.BROWSER_NAME):
+        cls.driver=Driver.chooseDriver(browser_name)
 
     @classmethod
     def get_driver(self):
@@ -17,7 +26,8 @@ class Browser(metaclass=Singleton):
     # function to go to the specified url
     @classmethod
     def go_to_site(cls,base_url):
-        return cls.driver.get(base_url)
+        logger.makeLog(str(cls.get_driver()))
+        return cls.get_driver().get(base_url)
     
     # function to return the current url
     @classmethod
