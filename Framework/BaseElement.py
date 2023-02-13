@@ -28,7 +28,7 @@ class BaseElement(ABC):
     Clicks on the element.
 
     """
-    driver = Browser.get_driver()
+    # driver = Browser.get_driver()
 
     def __init__(self,locator):
         '''
@@ -50,7 +50,7 @@ class BaseElement(ABC):
         ----------
         Returns an element.
         '''
-        return WebDriverWait(self.driver,time).until(EC.presence_of_element_located(self.locator))
+        return WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_element_located(self.locator))
 
     def find_elements(self,time=1):
         '''
@@ -63,7 +63,7 @@ class BaseElement(ABC):
         ----------
         Returns an array.
         '''
-        return WebDriverWait(self.driver,time).until(EC.presence_of_all_elements_located(self.locator))
+        return WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_all_elements_located(self.locator))
 
     def element_is_present(self):
         '''

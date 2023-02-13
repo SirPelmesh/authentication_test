@@ -6,21 +6,22 @@ from browser_config import BrowserConfig
 
 class Browser(metaclass=Singleton):
 
-    driver = Driver.chooseDriver(BrowserConfig.BROWSER_NAME)
+    def __init__(self):
+        self.driver = Driver.chooseDriver(BrowserConfig.BROWSER_NAME)
 
     @classmethod
-    def get_driver(self):
-        return self.driver
+    def get_driver(cls):
+        return cls().driver
 
     @classmethod
     def quit(self):
-        self.clear()
         self.get_driver().quit()
+        # self.driver = None
 
     # function to go to the specified url
     @classmethod
     def go_to_site(cls,base_url):
-        return cls.driver.get(base_url)
+        cls.get_driver().get(base_url)
     
     # function to return the current url
     @classmethod

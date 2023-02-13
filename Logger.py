@@ -5,4 +5,4 @@ class Logg():
         self.logger = logging.getLogger()
 
     def makeLog(self,text):
-        self.logger.warning(msg=text)
+        self.logger.info(msg=text)
