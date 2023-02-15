@@ -1,5 +1,5 @@
 from Framework.BaseElement import BaseElement
 
-# Class for button elements
-class Button(BaseElement):
+
+class Button(BaseElement):  # class for button elements
     pass

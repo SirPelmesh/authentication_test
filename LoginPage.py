@@ -3,6 +3,7 @@ from Framework.BasePage import BasePage
 from Framework.TextBox import TextBox
 from Framework.Button import Button
 
+
 class LoginPage(BasePage):
 
     USERNAME_LOCATOR = (By.NAME, "uid")  # locator for the username field
@@ -20,8 +21,8 @@ class LoginPage(BasePage):
 
     # function to input password
     def enter_password(self, password):
-        passw_field = TextBox(self.PASSWORD_LOCATOR)  # search for the password field
-        passw_field.enter_data(password)
+        password_field = TextBox(self.PASSWORD_LOCATOR)  # search for the password field
+        password_field.enter_data(password)
 
     # button click to send data
     def click_on_the_submit_button(self):

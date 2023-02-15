@@ -3,6 +3,7 @@ from Framework.BasePage import BasePage
 from Framework.TextBox import TextBox
 from Framework.Button import Button
 
+
 class FeedbackPage(BasePage):
 
     URL = "http://testfire.net/feedback.jsp"

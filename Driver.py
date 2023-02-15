@@ -2,10 +2,11 @@ import pytest
 from selenium import webdriver
 from Singleton import Singleton
 
+
 class Driver(metaclass = Singleton):
 
     @staticmethod
-    def chooseDriver(browser_name):
+    def choose_driver(browser_name):
         if browser_name == "chrome":
             options = webdriver.ChromeOptions()
             print("\nstart chrome browser for test..")

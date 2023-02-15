@@ -1,6 +1,7 @@
 from abc import ABC
 from Framework.BaseElement import BaseElement
 
+
 class BasePage(ABC):
     """
     Abstract class for pages.

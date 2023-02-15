@@ -4,18 +4,19 @@ from Singleton import Singleton
 from Driver import Driver
 from browser_config import BrowserConfig
 
+
 class Browser(metaclass=Singleton):
 
     def __init__(self):
-        self.driver = Driver.chooseDriver(BrowserConfig.BROWSER_NAME)
+        self.driver = Driver.choose_driver(BrowserConfig.BROWSER_NAME)
 
     @classmethod
     def get_driver(cls):
         return cls().driver
 
     @classmethod
-    def quit(self):
-        self.get_driver().quit()
+    def quit(cls):
+        cls.get_driver().quit()
         # self.driver = None
 
     # function to go to the specified url
@@ -25,17 +26,17 @@ class Browser(metaclass=Singleton):
     
     # function to return the current url
     @classmethod
-    def current_url(self):
-        return self.driver.current_url
+    def current_url(cls):
+        return cls.get_driver().current_url
 
     @classmethod
-    def refresh(self):
-        self.driver.refresh()
+    def refresh(cls):
+        cls.get_driver().refresh()
 
     @classmethod
-    def catch_alert(self):
+    def catch_alert(cls):
         try:
-            Browser.get_driver().switch_to.alert.accept()
+            cls.get_driver().switch_to.alert.accept()
             return True
         except NoAlertPresentException:
             return False

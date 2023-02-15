@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from Browser import Browser
 from abc import ABC, abstractmethod
 
+
 class BaseElement(ABC):
     """
     Abstract class for locator.
