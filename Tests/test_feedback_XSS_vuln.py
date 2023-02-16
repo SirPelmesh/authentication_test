@@ -1,14 +1,7 @@
-import time
-
-from selenium.common import NoAlertPresentException
-
-from FeedbackPage import FeedbackPage
-from HomePage import HomePage
-from Browser import Browser
-from Framework.Button import Button
-from SendFeedbackPage import SendFeedbackPage
-from Logger import Logg
-from time import sleep
+from Tests.FeedbackPage import FeedbackPage
+from Tests.HomePage import HomePage
+from Framework.Browser import Browser
+from Framework.Logger import Logg
 
 logger=Logg('test_feedback_xss_vuln')
 

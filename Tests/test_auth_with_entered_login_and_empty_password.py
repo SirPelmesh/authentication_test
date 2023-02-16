@@ -1,9 +1,8 @@
 import pytest
-from LoginPage import LoginPage
-from HomePage import HomePage
-from Browser import Browser
-from Framework.Button import Button
-from Logger import Logg
+from Framework.Browser import Browser
+from Tests.HomePage import HomePage
+from Tests.LoginPage import LoginPage
+from Framework.Logger import Logg
 
 logger=Logg(str('test_auth_with_entered_login_and_empty_password'))
 

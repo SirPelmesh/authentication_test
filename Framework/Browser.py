@@ -1,13 +1,12 @@
 from selenium.common import NoAlertPresentException
-
-from Singleton import Singleton
-from Driver import Driver
-from browser_config import BrowserConfig
+from Framework.Singleton import Singleton
+from Framework.Driver import Driver
+from Framework.browser_config import BrowserConfig
 
 
 class Browser(metaclass=Singleton):
 
-    driver = None
+    #driver = None
     # def __init__(self):
     #     self.driver = Driver.choose_driver(BrowserConfig.BROWSER_NAME)
 

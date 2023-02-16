@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from Framework.BasePage import BasePage
 
+
 class WelcomePage(BasePage):
 
     # a unique locator

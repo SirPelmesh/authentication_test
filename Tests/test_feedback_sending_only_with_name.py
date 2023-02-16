@@ -1,9 +1,7 @@
-from FeedbackPage import FeedbackPage
-from HomePage import HomePage
-from Browser import Browser
-from Framework.Button import Button
-from SendFeedbackPage import SendFeedbackPage
-from Logger import Logg
+from Tests.FeedbackPage import FeedbackPage
+from Tests.HomePage import HomePage
+from Tests.SendFeedbackPage import SendFeedbackPage
+from Framework.Logger import Logg
 
 logger=Logg('test_feedback_sending_only_with_name')
 

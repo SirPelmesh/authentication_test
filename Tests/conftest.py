@@ -1,7 +1,9 @@
 import pytest
-from Browser import Browser
-from Logger import Logg
-from browser_config import BrowserConfig
+# import sys.path
+from Framework.Browser import Browser
+from Framework.Logger import Logg
+# from authentification_test.Framework
+from Framework.browser_config import BrowserConfig
 
 
 logger=Logg(f'Browser-{str(Browser)}')

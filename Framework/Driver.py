@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from Singleton import Singleton
+from Framework.Singleton import Singleton
 
 
 class Driver(metaclass = Singleton):

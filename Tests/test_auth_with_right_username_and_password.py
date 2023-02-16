@@ -1,10 +1,8 @@
 import pytest
-from LoginPage import LoginPage
-from WelcomePage import WelcomePage
-from HomePage import HomePage
-from Browser import Browser
-from Framework.Button import Button
-from Logger import Logg
+from Tests.HomePage import HomePage
+from Tests.LoginPage import LoginPage
+from Tests.WelcomePage import WelcomePage
+from Framework.Logger import Logg
 
 logger=Logg('test_auth_with_right_username_and_password')
 

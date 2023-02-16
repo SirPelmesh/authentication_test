@@ -1,8 +1,8 @@
+from abc import ABC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from Browser import Browser
-from abc import ABC, abstractmethod
+from Framework.Browser import Browser
 
 
 class BaseElement(ABC):
