@@ -7,8 +7,13 @@ from browser_config import BrowserConfig
 
 class Browser(metaclass=Singleton):
 
-    def __init__(self):
-        self.driver = Driver.choose_driver(BrowserConfig.BROWSER_NAME)
+    driver = None
+    # def __init__(self):
+    #     self.driver = Driver.choose_driver(BrowserConfig.BROWSER_NAME)
+
+    @classmethod
+    def driver_init(cls,browser_name=BrowserConfig.BROWSER_NAME):
+        cls.driver=Driver.choose_driver(browser_name)
 
     @classmethod
     def get_driver(cls):

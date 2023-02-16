@@ -15,8 +15,7 @@ class Driver(metaclass = Singleton):
         elif browser_name == "firefox":
             options = webdriver.FirefoxOptions()
             print("\nstart firefox browser for test..")
-            browser = webdriver.Firefox(options=options)
-            return browser
+            return webdriver.Firefox(options=options)
 
         else:
             raise pytest.UsageError("--browser_name should be chrome or firefox")
